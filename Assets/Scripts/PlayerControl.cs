@@ -46,6 +46,11 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        if (GameLogic.GamePause)
+        {
+            return;
+        }
+
         horizontalP1 = Input.GetAxisRaw("Horizontal");
         verticalP1 = Input.GetAxisRaw("Vertical");
 
